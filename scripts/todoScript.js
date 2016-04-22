@@ -28,5 +28,6 @@ todoListApp.controller("todoControl", function($scope) {
     // function to empty list
     $scope.clearAll = function() {
         $scope.todoList = [];
+        $scope.taskNumber = 0;
     }
 })

@@ -22,14 +22,20 @@
             <table class="table table-striped">
                 <!--Column headers-->
                 <tr style="font-weight:bold;">
-                    <td class="col-xs-2">#</td>
-                    <td class="col-xs-2">Done</td>
-                    <td>Task</td>
+                    <td class="col-xs-2">
+                        <h2>#</h2>
+                    </td>
+                    <td class="col-xs-2">
+                        <h2>Done</h2>
+                    </td>
+                    <td>
+                        <h2>Task</h2>
+                    </td>
                 </tr>
                 <!--Table data-->
                 <tr ng-repeat="tasks in todoList">
                     <td><span>{{tasks.todoNum}}</span></td>
-                    <td><input type="checkbox" ng-model="tasks.done" ng-change="todoDone()" /></td>
+                    <td><input type="checkbox" ng-model="tasks.done" /></td>
                     <!--*alternative* -->
                     <!--<span ng-bind="tasks.todoText"></span>-->
                     <td><span>{{tasks.todoText}}</span></td>
