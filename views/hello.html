@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--this directive tells angular to treat the whole view as an angular app-->
+<html ng-app>
+    <head>
+        <script src="../lib/angular.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <span>Name:</span>
+            <!--this directive binds a property in the scope to one of these: input, select, textarea-->
+            <input type="text" ng-model="yourName" />
+        </div>
+        <hr>
+        <!--binding-->
+        <h1>Hello {{yourName}}</h1>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="phoneTemplating">
+    <head>
+        <script src="../lib/angular.min.js"></script>
+    </head>
+    <body ng-controller="phoneList">
+        <h1>Cellphones</h1>
+        <ul>
+            <li ng-repeat="phone in phones">
+                <span style="font-weight: bold">{{phone.name}}</span>
+                <p>{{phone.description}}</p>
+            </li>
+        </ul>
+    </body>
+    <script>
+        var phoneApp = angular.module("phoneTemplating", []);
+        
+        phoneApp.controller("phoneList", function($scope) {
+            $scope.phones = [
+                {'name': 'Galaxy S6',
+                 'description': 'expensive korean brick' },
+                {'name': 'iPhone 6',
+                 'description': 'America\'s version of the overpriced brick'}
+            ];
+        });
+    </script>
+</html>

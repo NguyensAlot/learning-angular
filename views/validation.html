@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="cssValidation">
+    <head>
+        <script src="../lib/angular.min.js"></script>
+        <style>
+            .user-input {
+                transition: all linear 0.5s;
+                background: transparent;
+            }
+            /*angular css directives*/
+            .user-input.ng-invalid {
+                color: white;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Enter in an integer</h1>
+        <div ng-controller="validator">
+            <input ng-model="userInput" ng-pattern="/^\d+$/" class="user-input" />
+        </div>
+    </body>
+    <script>
+        angular.module("cssValidation", [])
+            .controller("validator", ["$scope", function($scope) {
+                $scope.val = 1;
+            }]);
+    </script>
+</html>
